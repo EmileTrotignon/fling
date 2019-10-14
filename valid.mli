@@ -1,0 +1,21 @@
+(***********************************/*******|*****************************************)
+(* <valid.mli>                     /\ /  /\ | /\ ####################################*)
+(*                                 \_ \_ \/ | \_ ####################################*)
+(* <created by Emile Trotignon>                                                      *)
+(*                                        _     _  |                                 *)
+(* <date : 10/10/2109>             |\ /\ |  |\\ _\ | /\ #############################*)
+(*                                 || \/ |  ||| \| | \_ #############################*)
+(*                                                                                   *)
+(*                                  _        /  _ o        _                         *)
+(*                                 /_ || |\ /\ |  | /\ || |  /\ #####################*)
+(*                                 _/ \| |/ \_ |  | \_ \| |  \_ #####################*)
+(*                                       |                                           *)
+(*                                    _   _ o  _       _ _   _ | _                   *)
+(*                                 |\ _\ |  | /_ #### /_ _\ /  | _\\  / #############*)
+(*                                 |/ \| |  | _/ #### _/ \| \_ | \| \/  #############*)
+(**********************************|********************************/*****************)
+
+(** [get_valid_game equiprobable size] returns a game of cardinal [size]. 
+    if [equiprobable] = true, then the return value is choosen equiprobably amongst all game of cardinal [size] (warning : very slow for [size] > 4)
+    if [equiprobable] = false, then the equiprobability of outcomes is not guaranteed *) 
+val get_valid_game : bool -> int -> Rules.game
